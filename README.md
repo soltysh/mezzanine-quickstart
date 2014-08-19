@@ -1,16 +1,16 @@
 Mezzanine on OpenShift
 ======================
 
-This repository contains working Mezzanine instalation you can use to setup your
-own copy of one of the best python CMS available. Below you'll find instructions
-how to set it up as is. At bottom there are instructions how to setup Mezzanine
-from scratch to use on Openshift. Enjoy!
+This repository contains working [Mezzanine](http://mezzanine.jupo.org/)
+installation you can use to setup your own copy of one of the best python CMS
+available. Below you'll find instructions how to set it up as is. At bottom there
+ are instructions how to setup Mezzanine from scratch to use on Openshift. Enjoy!
 
 
 Setup as is
 -----------
 
-Assuming you already hava an [OpenShift](https://www.openshift.com/) account, if
+Assuming you already have an [OpenShift](https://www.openshift.com/) account, if
 not go immediately and [create one](https://www.openshift.com/app/account/new)!
 
 1. Create a python-2.7 application with either mysql or postgresql db cartridge.
