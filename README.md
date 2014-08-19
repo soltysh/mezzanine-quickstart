@@ -127,7 +127,7 @@ their values with your own, and _DO NOT SHARE_ this value with anyone (see [Djan
     NEVERCACHE_KEY = "yet_another_very_long_random_text"
     ```
 
-Next locate `DATABASES` and change it's value with:
+    Next locate `DATABASES` and change it's value with:
 
     ```python
     import os
@@ -167,7 +167,7 @@ Next locate `DATABASES` and change it's value with:
         }
     ```
 
-Add `.rhcloud.com` to `ALLOWED_HOSTS`:
+    Add `.rhcloud.com` to `ALLOWED_HOSTS`:
 
     ```python
     ALLOWED_HOSTS = [
@@ -175,7 +175,7 @@ Add `.rhcloud.com` to `ALLOWED_HOSTS`:
     ]
     ```
 
-Finally locate `STATIC_ROOT` and change it with:
+    Finally locate `STATIC_ROOT` and change it with:
 
     ```python
     if 'OPENSHIFT_REPO_DIR' in os.environ:
@@ -184,7 +184,7 @@ Finally locate `STATIC_ROOT` and change it with:
         STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
     ```
 
-and `MEDIA_ROOT` with:
+    and `MEDIA_ROOT` with:
 
     ```python
     if 'OPENSHIFT_DATA_DIR' in os.environ:
