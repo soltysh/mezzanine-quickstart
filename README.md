@@ -208,7 +208,7 @@ following contents:
     ln -sf $OPENSHIFT_DATA_DIR/media $OPENSHIFT_REPO_DIR/wsgi/static/media
     ```
 
-and `.openshift/action_hooks/deploy` with:
+    and `.openshift/action_hooks/deploy` with:
 
     ```bash
     #!/bin/bash
@@ -226,14 +226,14 @@ and `.openshift/action_hooks/deploy` with:
     python "$OPENSHIFT_REPO_DIR"cms/manage.py collectstatic --noinput -v0
     ```
 
-and `wsgi/static/.htaccess` with:
+    and `wsgi/static/.htaccess` with:
 
     ```apache
     RewriteEngine On
     RewriteRule ^application/static/(.+)$ /static/$1 [L]
     ```
 
-*NOTE* Don't forget to add executable rights to `.openshift/action_hooks/{deploy,build}`.
+    *NOTE* Don't forget to add executable rights to `.openshift/action_hooks/{deploy,build}`.
 
 9. Commit everything and push to OpenShift and enjoy your application at
 `http://<your app name>-<your domain>.dev.rhcloud.com/`.
