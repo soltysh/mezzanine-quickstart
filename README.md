@@ -53,6 +53,20 @@ Also it might be good idea to update `TIME_ZONE` according to your demands.
 
 6. Now enjoy your application at `http://<your app name>-<your domain>.dev.rhcloud.com/`.
 
+*NOTICE*
+
+By default when running first `syncdb` Mezzanine will create `admin` user with
+some random password. To change it login into OpenShift console and run following
+commands:
+
+```
+source ${OPENSHIFT_PYTHON_DIR}virtenv/bin/activate
+cd ${OPENSHIFT_REPO_DIR}/cms
+python manage.py changepassword admin
+```
+
+and type twice your new `admin` password.
+
 
 Setup Mezzanine from scratch
 ----------------------------
