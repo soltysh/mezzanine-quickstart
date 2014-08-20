@@ -193,7 +193,7 @@ their values with your own, and _DO NOT SHARE_ this value with anyone (see [Djan
         MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
     ```
 
-8. One more step and you're ready to go, add `.openshift/action_hooks/build with
+8. One more step and you're ready to go, add `.openshift/action_hooks/build` with
 following contents:
 
     ```bash
